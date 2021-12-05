@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ocean_bg"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".PlayerActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="developed by @Vetri"
+        android:textColor="#000"
+        android:textSize="10sp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtsn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Song name"
+            android:textAlignment="center"
+            android:textColor=" #000"
+            android:textSize="22sp"
+            android:textStyle="italic">
+
+        </TextView>
+
+
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_marginBottom="30dp"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/logo_one">
+
+        </ImageView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            >
+
+            <TextView
+                android:id="@+id/txtsstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/seekbar"
+                android:text="0:10"
+                android:textColor="#000"
+                android:textSize="10sp">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/txtsstop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@id/seekbar"
+                android:text="4:10"
+                android:textColor="#000"
+                android:textSize="10sp">
+
+            </TextView>
+
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:thumbTint="@color/black">
+
+            </SeekBar>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/playbtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/ic_pause">
+
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnnext"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/playbtn"
+                android:background="@drawable/ic_next">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnprev"
+                android:layout_toLeftOf="@+id/playbtn"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/ic_prev"
+                android:layout_width="50dp"
+                android:layout_height="50dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnff"
+                android:layout_toRightOf="@id/btnnext"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/ic_fast_forward"
+                android:layout_width="40dp"
+                android:layout_height="40dp">
+
+            </Button>
+
+            <Button
+                android:id="@+id/btnfr"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@id/btnprev"
+                android:background="@drawable/ic_fast_rewind"
+                >
+
+            </Button>
+
+            <com.gauravk.audiovisualizer.visualizer.BarVisualizer
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/blast"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignParentBottom="true"
+                custom:avDensity="0.5"
+                custom:avType="outline"
+                custom:avWidth="4dp"
+                custom:avColor="#000"
+                custom:avSpeed="normal"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
