@@ -1,6 +1,5 @@
 package com.example.soundbutton;
 
-
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends Activity {
-
     MediaPlayer button_sound;
 
     @Override
@@ -24,7 +22,6 @@ public class MainActivity extends Activity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 button_sound = MediaPlayer.create(MainActivity.this,
                         R.raw.sound);
                 button_sound.start();
@@ -54,7 +51,6 @@ public class MainActivity extends Activity {
                 button_sound.start();
             }
         });
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -64,7 +60,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-
     }
 
 }
